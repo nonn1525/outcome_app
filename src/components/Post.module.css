@@ -3,6 +3,11 @@
   align-items: flex-start;
   padding-bottom: 10px;
 }
+.post_detail,
+.post_time {
+  border: solid 1px white;
+  padding-left: 10px;
+}
 .post_avatar {
   padding: 20px;
 }

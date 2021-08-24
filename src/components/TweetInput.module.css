@@ -1,7 +1,7 @@
 .tweet_form {
   margin: 40px;
   position: relative;
-  display: flex;
+  display: column;
 }
 .tweet_avatar {
   cursor: pointer;
@@ -17,6 +17,7 @@
   border: none;
   color: #333333;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 .tweet_addIcon {
   cursor: pointer;
@@ -30,7 +31,7 @@
   display: none;
 }
 .tweet_sendBtn {
-  background-color: #00bfff !important;
+  background-color: darkgray !important;
   border: none !important;
   color: white !important;
   font-weight: 800 !important;
@@ -51,4 +52,23 @@
   height: 40px !important;
   margin-left: 80% !important;
   cursor: none !important;
+}
+.avatar_logout {
+  display: flex;
+}
+.logout {
+  margin-left: auto;
+  background-color: gray;
+  border: none;
+  color: white;
+  font-weight: 800;
+  text-transform: inherit;
+  border-radius: 20px;
+  width: 80px;
+  height: 40px;
+  margin-left: 80%;
+}
+.logout:hover {
+  background-color: darkgray;
+  cursor: pointer;
 }

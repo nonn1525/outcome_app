@@ -5,3 +5,13 @@
 .feed::-webkit-scrollbar {
   display: none;
 }
+
+.feed_title_container {
+  font-size: 50px;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: -15px 5px 20px #ced0d3;
+  color: white;
+  letter-spacing: -0.05em;
+  font-family: "Anton", Arial, sans-;
+}
