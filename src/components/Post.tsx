@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import { Avatar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import MessageIcon from "@material-ui/icons/Message";
+import SmsIcon from "@material-ui/icons/Sms";
 import SendIcon from "@material-ui/icons/Send";
 
 interface PROPS {
@@ -14,6 +14,8 @@ interface PROPS {
   avatar: string;
   image: string;
   text: string;
+  detail: string;
+  time: string;
   timestamp: any;
   username: string;
 }
@@ -100,6 +102,8 @@ const Post: React.FC<PROPS> = (props) => {
           </div>
           <div className={styles.post_tweet}>
             <p>{props.text}</p>
+            <p className={styles.post_detail}>detail: {props.detail}</p>
+            <p className={styles.post_time}>time: {props.time}</p>
           </div>
         </div>
         {props.image && (
@@ -107,7 +111,7 @@ const Post: React.FC<PROPS> = (props) => {
             <img src={props.image} alt="tweet" />
           </div>
         )}
-        <MessageIcon
+        <SmsIcon
           className={styles.post_commentIcon}
           onClick={() => setOpenComments(!openComments)}
         />

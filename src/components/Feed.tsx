@@ -11,6 +11,8 @@ const Feed: React.FC = () => {
       avatar: "",
       image: "",
       text: "",
+      detail: "",
+      time: "",
       timestamp: null,
       username: "",
     },
@@ -26,6 +28,8 @@ const Feed: React.FC = () => {
             avatar: doc.data().avatar,
             image: doc.data().image,
             text: doc.data().text,
+            detail: doc.data().detail,
+            time: doc.data().time,
             timestamp: doc.data().timestamp,
             username: doc.data().username,
           }))
@@ -37,6 +41,15 @@ const Feed: React.FC = () => {
   }, []);
   return (
     <div className={styles.feed}>
+      <div className={styles.feed_title_container}>
+        <span>o</span>
+        <span>u</span>
+        <span>t</span>
+        <span>c</span>
+        <span>o</span>
+        <span>m</span>
+        <span>e</span>
+      </div>
       <TweetInput />
 
       {posts[0]?.id && (
@@ -48,6 +61,8 @@ const Feed: React.FC = () => {
               avatar={post.avatar}
               image={post.image}
               text={post.text}
+              detail={post.detail}
+              time={post.time}
               timestamp={post.timestamp}
               username={post.username}
             />
